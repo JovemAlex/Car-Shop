@@ -1,7 +1,7 @@
 enum CategoryOptions {
-  STREET = 'Street',
-  CUSTOM = 'Custom',
-  TRAIL = 'Trail',
+  STREET = 'street',
+  CUSTOM = 'custom',
+  TRAIL = 'trail',
 }
 
 export default CategoryOptions;
