@@ -2,7 +2,6 @@ import sinon from 'sinon';
 import { expect } from 'chai';
 import { Model } from 'mongoose';
 import ICar from '../../../src/Interfaces/ICar';
-import Car from '../../../src/Domains/Car';
 import CarServices from '../../../src/Services/CarServices';
 
 describe('Atualizar um carro', function () {
