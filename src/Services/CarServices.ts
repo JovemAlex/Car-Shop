@@ -22,4 +22,11 @@ export default class CarServices {
     const result = allCars.map((e) => this.createCarDomain(e));
     return result;
   }
+
+  public async findById(id: string) {
+    const car = await this._model.findById(id);
+    if (car === undefined) return undefined;
+    const result = car.map((e) => this.createCarDomain(e));
+    return result;
+  }
 }
