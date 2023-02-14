@@ -10,7 +10,7 @@ describe('Atualizar um carro', function () {
     // arr
     const id = '634852326b35b59438fbea2f';
 
-    const updateInput = {
+    const updateInput: ICar = {
       model: 'Marea',
       year: 1992,
       color: 'Red',
@@ -20,7 +20,7 @@ describe('Atualizar um carro', function () {
       seatsQty: 5,
     };
 
-    const updateOutput = {
+    const updateOutput: ICar = {
       id: '634852326b35b59438fbea2f',
       model: 'Marea',
       year: 1992,
