@@ -42,5 +42,7 @@ describe('Deve cadastrar um carro', function () {
     // ass
 
     expect(result).to.be.deep.equal(newCarOutput);
+
+    sinon.restore();
   });
 });
