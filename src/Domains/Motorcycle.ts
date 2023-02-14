@@ -1,9 +1,9 @@
 import IMotorcycle from '../Interfaces/IMotorcycle';
-import CategoryOptions from '../utils/CategoryOptions';
+// import CategoryOptions from '../utils/CategoryOptions';
 import Vehicle from './Vehicle';
 
 export default class Motorcycle extends Vehicle {
-  private category: CategoryOptions;
+  private category: string;
   private engineCapacity: number;
 
   constructor(motorcycle: IMotorcycle) {
@@ -12,7 +12,7 @@ export default class Motorcycle extends Vehicle {
     this.engineCapacity = motorcycle.engineCapacity;
   }
 
-  public setCategory(category: CategoryOptions) {
+  public setCategory(category: string) {
     this.category = category;
   }
 
