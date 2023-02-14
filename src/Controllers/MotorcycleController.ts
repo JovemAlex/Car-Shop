@@ -36,20 +36,20 @@ export default class MotorcycleController {
     }
   }
 
-  // public async updateById(req: Request, res: Response, next: NextFunction) {
-  //   try {
-  //     const { id } = req.params;
-  //     const car = req.body;
+  public async updateById(req: Request, res: Response, next: NextFunction) {
+    try {
+      const { id } = req.params;
+      const moto = req.body;
 
-  //     const carExist = await this._service.findById(id);
+      const motoExist = await this._service.findById(id);
 
-  //     if (!carExist) return res.status(422).json({ message: 'Invalid mongo id' });
-  //     if (carExist.length === 0) return res.status(404).json({ message: 'Car not found' });
+      if (!motoExist) return res.status(422).json({ message: 'Invalid mongo id' });
+      if (motoExist.length === 0) return res.status(404).json({ message: 'Motorcycle not found' });
 
-  //     const carUpdated = await this._service.update(id, car);
-  //     return res.status(200).json(carUpdated);
-  //   } catch (error) {
-  //     next(error);
-  //   }
-  // }
+      const motoUpdated = await this._service.update(id, moto);
+      return res.status(200).json(motoUpdated);
+    } catch (error) {
+      next(error);
+    }
+  }
 }

@@ -30,8 +30,8 @@ export default class MotorcycleServices {
     return result;
   }
 
-  // public async update(id: string, car: ICar) {
-  //   const carUpdate = await this._model.update(id, car);
-  //   return this.createCarDomain(carUpdate);
-  // }
+  public async update(id: string, car: IMotorcycle) {
+    const motoUpdate = await this._model.update(id, car);
+    return this.createMotorcycleDomain(motoUpdate);
+  }
 }
